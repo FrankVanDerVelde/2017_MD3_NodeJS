@@ -2,7 +2,7 @@
 
 Studenten werken aan een eigen JSON REST API met NodeJS. Deze repository bevat de basis om mee te werken.
 
-Studenten zetten de code zelf om naar EcmaScript 6 (en 7).
+Later kunnen we dit omzetten naar ECMAScript 6 en 7.
 
 #### Installatie:
 
@@ -31,4 +31,4 @@ Studenten zetten de code zelf om naar EcmaScript 6 (en 7).
 
 * Breakpoints in je NodeJS applicatie
 
-* chrome extensie voor HTTP methods (makkelijker testen van je endpoints)
+* chrome extensie voor HTTP methods (makkelijker testen van je endpoints) of Postman
