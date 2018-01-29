@@ -3,6 +3,7 @@
  */
 var config = require('./config'),
     express = require('express'),
+    morgan = require('morgan'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override');
 
@@ -13,6 +14,7 @@ module.exports = function() {
 
     if (process.env.NODE_ENV === 'development') {
         /** hier gaan we straks specifieke development middleware koppelen (bijvoorbeeld een logger) */
+        app.use(morgan('dev'));
     } else if (process.env.NODE_ENV === 'production') {
         /** hier gaan we straks specifieke productie middleware koppelen (bijvoorbeeld compressie) */
     }
@@ -50,6 +52,11 @@ module.exports = function() {
      * enable PUT/DELETE REST
      */
     app.use(methodOverride());
+
+    /**
+     * Good practise: req object for storing properties
+     */
+    app.request.md3 = {};
 
     /**
      * include all routing configuration
