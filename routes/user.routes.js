@@ -8,5 +8,10 @@ module.exports = function(app) {
     app.route('/users/:userID')
         .get(user.read);
 
+        app.route('/meetings')
+        .get(user.meetings)
+        .post(user.createMeeting)
+        ;
+
     app.param('userID', user.getUserByID);
 };
